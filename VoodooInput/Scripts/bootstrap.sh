@@ -13,13 +13,13 @@
 #  a compiled VoodooInput release will be bootstrapped in the working directory.
 #
 #  Latest version available at:
-#  https://raw.githubusercontent.com/acidanthera/VoodooInput/master/VoodooInput/Scripts/bootstrap.sh
+#  https://raw.githubusercontent.com/devicemanager/VoodooInput/master/VoodooInput/Scripts/bootstrap.sh
 #
 #  Example usage:
-#  src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/acidanthera/VoodooInput/master/VoodooInput/Scripts/bootstrap.sh) && eval "$src" || exit 1
+#  src=$(/usr/bin/curl -Lfs https://raw.githubusercontent.com/devicemanager/VoodooInput/master/VoodooInput/Scripts/bootstrap.sh) && eval "$src" || exit 1
 #
 
-REPO_PATH="acidanthera/VoodooInput"
+REPO_PATH="devicemanager/VoodooInput"
 SDK_PATH="VoodooInput.kext"
 DSYM_PATH="VoodooInput.kext.dSYM"
 SDK_CHECK_PATH="${SDK_PATH}/Contents/Resources/VoodooInputMultitouch/VoodooInputMessages.h"
@@ -270,7 +270,7 @@ install_compiled_sdk() {
     return 1
   fi
 
-  "${GIT}" clone "https://github.com/acidanthera/MacKernelSDK" -b "master" --depth=1 || ret=$?
+  "${GIT}" clone "https://github.com/devicemanager/MacKernelSDK" -b "master" --depth=1 || ret=$?
   if [ $ret -ne 0 ]; then
     echo "ERROR: Failed to clone MacKernelSDK with code ${ret}!"
     return 1
